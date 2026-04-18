@@ -57,6 +57,17 @@ export default function About() {
               Actualmente ampliando mis conocimientos en Full Stack con Node.js.
             </p>
 
+            <div className="about-ctas">
+              <a 
+                href="/CV_Gabriel_Tunoque.pdf" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="btn btn-primary"
+              >
+                Ver CV
+              </a>
+            </div>
+
             <div className="about-grid">
               {info.map((it) => (
                 <div className="about-item card" key={it.label}>

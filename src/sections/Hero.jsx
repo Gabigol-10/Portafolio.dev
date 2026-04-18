@@ -85,8 +85,13 @@ export default function Hero() {
             <button className="btn btn-primary" onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}>
               Ver Proyectos →
             </button>
-            <a href="#contact" className="btn btn-outline" onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }) }}>
-              Descargar CV
+            <a 
+              href="/CV_Gabriel_Tunoque.pdf" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="btn btn-outline"
+            >
+              Ver CV
             </a>
           </div>
         </motion.div>

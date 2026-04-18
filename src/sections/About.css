@@ -95,6 +95,13 @@
   color: var(--text);
 }
 
+.about-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
 @media (max-width: 900px) {
   .about-layout {
     grid-template-columns: 1fr;

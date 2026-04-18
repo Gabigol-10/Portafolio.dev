@@ -66,7 +66,7 @@ export default function Contact() {
             </div>
 
             <a
-              href="https://wa.me/51992802996"
+              href="https://wa.me/51992802996?text=Hola,%20revis%C3%A9%20tu%20portafolio%20y%20me%20pareci%C3%B3%20muy%20profesional.%20Estoy%20interesado%20en%20colaborar%20contigo%20en%20un%20proyecto.%20%C2%BFPodemos%20hablar%3F"
               target="_blank"
               rel="noreferrer"
               className="whatsapp-cta card"
