@@ -1,0 +1,148 @@
+/* ===== DESIGN TOKENS — Cyberpunk Theme ===== */
+:root {
+  --bg: #020617;
+  --bg-card: #0f172a;
+  --bg-nav: rgba(2, 6, 23, 0.92);
+  --border: rgba(0, 245, 255, 0.15);
+  --border-hover: rgba(0, 245, 255, 0.5);
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-dim: #475569;
+  --cyan: #00f5ff;
+  --cyan-glow: rgba(0, 245, 255, 0.3);
+  --pink: #f0abfc;
+  --orange: #fb923c;
+  --green: #4ade80;
+  --purple: #a78bfa;
+  --red: #f87171;
+
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --nav-h: 64px;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== RESET ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-heading);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button { font-family: inherit; cursor: pointer; }
+img { max-width: 100%; display: block; }
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--cyan); }
+
+/* ===== SELECTION ===== */
+::selection { background: var(--cyan); color: var(--bg); }
+
+/* ===== SHARED SECTION STYLES ===== */
+.section {
+  padding: 100px 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.section-num {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-top: 4px;
+}
+
+.section-sub {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+/* ===== NEON GLOW ===== */
+.glow-cyan {
+  color: var(--cyan);
+  text-shadow: 0 0 20px var(--cyan-glow), 0 0 40px rgba(0, 245, 255, 0.15);
+}
+
+/* ===== CARD BASE ===== */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+  transition: var(--transition);
+}
+
+.card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 0 30px var(--cyan-glow), 0 0 60px rgba(0, 245, 255, 0.08);
+}
+
+/* ===== BTN ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  border: none;
+}
+
+.btn-primary {
+  background: var(--cyan);
+  color: var(--bg);
+}
+.btn-primary:hover {
+  background: #33f8ff;
+  box-shadow: 0 0 30px var(--cyan-glow);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--cyan);
+  border: 1px solid var(--cyan);
+}
+.btn-outline:hover {
+  background: rgba(0, 245, 255, 0.08);
+  box-shadow: 0 0 20px var(--cyan-glow);
+}
+
+@media (max-width: 768px) {
+  .section { padding: 80px 20px; }
+}
